@@ -19,9 +19,9 @@ const CustomLink = ({ href, title, className = "" }) => {
   );
 };
 
-const StableMenu = () => {
+const StableMenu = ({ className = "" }) => {
   return (
-    <nav className="flex items-center max-md:hidden">
+    <nav className={`flex items-center ${className}`}>
       <CustomLink href={"/"} title={"Home"} className="mr-4" />
       <CustomLink href={"/news"} title={"News"} className="mx-4" />
       <CustomLink href={"/works"} title={"Works"} className="mx-4" />

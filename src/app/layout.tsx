@@ -1,4 +1,4 @@
-import NavBar from "@/components/ui/NavBar/NavBar";
+import NavBar from "@/components/myui/NavBar/NavBar";
 import "../styles/globals.css";
 import "../styles/ScrollBar.css";
 import { Noto_Sans_JP, Montserrat } from "next/font/google";

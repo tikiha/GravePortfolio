@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import LogoPic from "@/Pics/next.svg";
+import LogoPic from "@/Images/Svgs/next.svg";
 import HamburgerButton from "./HamburgerButton";
 import StableMenu from "./StableMenu";
 import HamburgerMenu from "./HamburgerMenu";
@@ -15,7 +15,7 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
 
-  // ハンバーガメニュー外で閉じる
+  // ハンバーガメニュー外のクリックで閉じる
   const handleClickOutside = (e) => {
     if (
       MenuRef.current?.contains(e.target) ||
@@ -52,7 +52,7 @@ const NavBar = () => {
         />
       </Link>
 
-      <StableMenu />
+      <StableMenu className="max-md:hidden" />
 
       <HamburgerButton
         ButtonRef={ButtonRef}

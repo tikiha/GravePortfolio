@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
-import vercelSvg from "../../public/next.svg";
+import vercelSvg from "@/Images/Svgs/next.svg";
+import { motion } from "framer-motion";
+import NewsAccordion from "@/components/NewsAccordion";
 
 export default function Home() {
   return (
@@ -18,7 +21,9 @@ export default function Home() {
           gridレイアウトテンプレート
         </h1>
       </div>
-      <div className="mx-auto xl:w-[1280px] w-full px-4 grid grid-cols-12 gap-x-8 gap-y-10 h-screen bg-red-100"></div>
+      <div className="mx-auto xl:w-[1280px] w-full px-4 grid grid-cols-12 gap-x-8 gap-y-10 ">
+        <NewsAccordion className="col-span-12" />
+      </div>
     </main>
   );
 }
