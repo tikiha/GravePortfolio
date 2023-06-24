@@ -1,0 +1,50 @@
+:root {
+  --thumb: #606060;
+  --thumb-hover: #909090;
+
+  --thumb-color: var(--thumb);
+  --thumb-color-hover: var(--thumb-hover);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --thumb-color: var(--thumb-hover);
+    --thumb-color-hover: var(--thumb);
+  }
+}
+
+.light {
+  --thumb-color: var(--thumb);
+  --thumb-color-hover: var(--thumb-hover);
+}
+
+.dark {
+  --thumb-color: var(--thumb-hover);
+  --thumb-color-hover: var(--thumb);
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--thumb-color);
+  border-radius: 7px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--thumb-color-hover);
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumb-color) transparent;
+  overflow: overlay;
+}
